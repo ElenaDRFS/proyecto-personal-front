@@ -1,0 +1,202 @@
+/* colores */
+#028090 turquesa oscuro
+#F0B7B3 rosa palo
+#758BFD azul claro
+#2B3A67 azul oscuro
+#C6D8D3 gris
+
+
+header{
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    justify-content: center;
+}
+
+#roobieheader {
+    width: 50%;
+  
+}
+
+#subsection {
+    display: flex;
+    flex-direction: column;
+}
+
+#roobieintro {
+    width: 30%;
+    height: auto;
+    margin: auto;
+    
+
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+
+}
+
+#advice, #submit{
+    background-color: #2B3A67;
+    color: white;
+    padding-top: 10px ;
+    padding-bottom: 10px ;
+    margin: auto;
+
+   
+}
+
+
+h1{
+    font-family: 'Marcellus';
+    font-size:x-large;
+    text-align: center;
+    color:#2B3A67
+}
+
+h3{
+    color:#2B3A67;
+    font-family: 'Philosopher';
+}
+
+p, article{ font-family: 'Philosopher';
+
+}
+
+nav, #separation{
+    background-color: #C6D8D3;
+    padding-top: 2%;
+    padding-bottom: 3%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    
+}
+a{
+    font-size: x-large;
+    text-decoration: none;
+}
+
+
+
+
+
+/* food.html */
+button{
+    border: none;
+    border-radius: 5px;
+    background-color:#C6D8D3;
+    width: min-content;
+    font-family: 'Philosopher';
+}
+
+button:hover{
+    background-color: #758BFD ;
+}
+
+
+#icons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.container{
+    margin: 1%;
+}
+
+
+/* years */
+form{
+    
+    display: flex;
+    flex-direction: column;   
+    margin-top: 20px;
+    
+}
+
+#submit{
+    margin: 0;
+    margin-bottom: 50px;
+    
+
+
+}
+select{
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+/* media queries */
+
+@media(min-width:789px){
+
+    main{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    article{
+        margin-bottom: 50px;
+    }
+
+    header{
+    display: block;
+    }
+    nav{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+   #roobieheader{
+    width: 30%;
+    
+   }
+
+    #roobieintro {
+        width: 20%;
+        height: auto;
+        margin: auto;
+            
+    }
+
+    #saludo{
+        padding-top: 30px;
+        margin-right: 100px;
+    }
+
+    #intro{
+        margin-left: 100px;
+    }
+    #subsection{
+        display: flex;
+        flex-direction: row;
+
+    }
+    
+    footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+       
+    
+    }
+    
+    #list{
+        display: flex;
+        flex-direction: row;
+    }
+
+    #advice{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+}

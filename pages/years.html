@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Years</title>
+        <link rel="stylesheet" href="../style.css">
+        <link rel="shortcut icon" href="../assets/robot.png" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Philosopher&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </head>
+<body>
+    <header>
+        <a href="../index.html"><img id="roobieheader" src="../assets/Foodie.png" alt="logo"></a>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="./food.html">Alimentos</a>
+            
+        </nav>
+
+    </header>
+
+    <main>
+        <form action="#" id="seleccion">
+            <select name="year" id="year">
+
+            <option value="#">Selecciona un año</option>
+            <option value="22">2022</option>
+            <option value="21">2021</option>
+            <option value="20">2020</option>
+        </select>
+        <input id="submit" type="submit" value="Generar gráfica">
+        </form>
+
+        <div id="cirulo">
+            <canvas id="myChart2"></canvas>
+        </div>
+
+    </main>
+
+    
+    <script src="../script.js"></script>
+</body>
+</html>
