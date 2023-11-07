@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="shortcut icon" href="../assets/robot.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Philosopher&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     
 </head>
 <body>
@@ -24,6 +23,7 @@
         <section>
             <p>En este espacio podrás conocer cómo el consumo por persona ha ido cambiando con el tiempo. Clica en cada imagen y descubrirás una gráfica.
             </p>
+            <p>Para generar un gráfico nuevo, primero borra el anterior pulsando en "borrar gráfica"</p>
         </section>
         <section id="icons">
 
@@ -109,13 +109,16 @@
         
         </section>
 
+
+        <button class="reload" id="reset2" type="click">Borrar gráfica</button>
+
         <div id="grafica">
             <canvas id="myChart"></canvas>
         </div>
         
     </main>
   
-    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../script.js"></script>
 </body>
 </html>

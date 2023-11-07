@@ -56,9 +56,21 @@ let doscero = {
   valores:[]
 };
 
+const ctx2 = document.getElementById('myChart2'); 
 
 
 
+function again1(){
+  document.getElementById('reset1').addEventListener('click', function(){
+    location.reload();
+  })
+}
+
+function again2(){
+  document.getElementById('reset2').addEventListener('click', function(){
+    location.reload();
+  })
+}
 
 
 
@@ -303,10 +315,7 @@ async function alreadyLoad(){
 
 //función general para pintar los gráficas. luego en el advent listener le diremos qué datos pintar, poniendo los parámetros correspondientes. con el rest le indicamos que acepta cualquier número de objetos, así nos vale para las gráfica múltiples
 function printGraphs(ctx, ...objetos){
-       if(ctx){
-        if(window.grafico){
-            window.grafico.destroy();
-        }
+       
         // este objeto serán los datos que se pinten, tanto si se pasa  objeto como si se paan varios, se le pushearán los datos correspondientes
         let chartData ={
           labels:[],
@@ -327,12 +336,12 @@ function printGraphs(ctx, ...objetos){
       });
     });
       
-
-       window.grafico = new Chart(ctx, {
+   
+       new Chart(ctx, {
             type: 'line',
             data: chartData,
             options: {
-              responsive:true,
+              responsive:false,
               scales: {
                 y: {
                   beginAtZero: false
@@ -342,7 +351,7 @@ function printGraphs(ctx, ...objetos){
           });
         }   
    
-} 
+ 
        
 
 function arrozGraf(){
@@ -444,10 +453,12 @@ async function loadApi2(){
 
 async function rellenarAños(){
   await loadApi2();
+  
   let filtro2;
 
     for(obj of filtro){
     filtro2 = obj.años;
+    console.log(filtro2)
     
     for (i = 0; i < filtro2.length;i++){
       let indicecero = filtro2[i]
@@ -471,63 +482,78 @@ async function rellenarAños(){
 }
 
 
+
+
 function pintarRosco(){
+  
   document.getElementById('seleccion').addEventListener('submit', function (event){
     event.preventDefault();
     let selectElement = document.getElementById('year')
     let selectedYear = selectElement.value;
-    const ctx2 = document.getElementById('myChart2'); 
-    if(window.rosco){
-      window.rosco.destroy();
-    }
     
-    if(selectedYear === '22'){
+     if(selectedYear === '22'){
       
-      window.rosco = new Chart(ctx2,{
+      new Chart(ctx2,{
         type:'doughnut',
-        data: data = {
+        data: {
             labels: nombres,
             datasets: [{
               label: 'Valor',
               data: dosdos.valores,
               backgroundColor: colors,
-              hoverOffset: 6
+             
+             
             }]
-          }
+          },
+          options: {
+            hoverOffset: 60,
+            responsive:false
+          },
+         
       }) 
       
-    }if(selectedYear === '21'){
+    }else if(selectedYear === '21'){
       
-      window.rosco = new Chart(ctx2,{
+      new Chart(ctx2,{
         type:'doughnut',
-        data: data = {
+        data: {
             labels: nombres,
             datasets: [{
               label: 'Valor',
               data: dosuno.valores,
               backgroundColor: colors,
-              hoverOffset: 6
+              
             }]
-          }
+          },
+          options: {
+            hoverOffset: 60,
+            responsive:false
+          },
       }) 
       
 
-    }if(selectedYear === '20'){
+    }else if(selectedYear === '20'){
       
-      window.rosco =  new Chart(ctx2,{
+     new Chart(ctx2,{
         type:'doughnut',
-        data: data = {
+        data: {
             labels: nombres,
             datasets: [{
               label: 'Valor',
               data: doscero.valores,
               backgroundColor: colors,
-              hoverOffset: 6
+              
             }]
-          }
+          },
+          options: {
+            hoverOffset: 60,
+            responsive:false
+            
+          },
       }) 
       
     }
+    
   })
 
 }
@@ -557,9 +583,12 @@ if(document.title == 'Home'){
 
 };
 
+
+
 if(document.title == 'Food'){
     alreadyLoad()
     .then(()=>{
+        again2();
         arrozGraf();
         aveGraf();
         panGraf();
@@ -575,18 +604,17 @@ if(document.title == 'Food'){
         vacunoGraf();
         cervezaGraf();
         pescadoGraf();
-        
-        
-        
-    })
+       
     
 }
+    )};
 
 if(document.title == 'Years'){
   rellenarAños().then(()=>{
+    again1();
     pintarRosco();
+    
   })
 
 }
-
 
