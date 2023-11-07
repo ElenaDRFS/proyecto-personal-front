@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Years</title>
+        
+        <link rel="shortcut icon" href="../assets/robot.png" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Philosopher&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../style.css">
+    </head>
+<body>
+    <header>
+        <a href="../index.html"><img id="roobieheader" src="../assets/Foodie.png" alt="logo"></a>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="./food.html">Alimentos</a>
+            
+        </nav>
+
+    </header>
+
+    <main>
+        <p>En este espacio podrás conocer ha sido el comumo total de los productos dependiendo del año. Selecciona un año y descubrirás una gráfica.
+        </p>
+        <p>Para generar un gráfico nuevo, primero borra el anterior pulsando en "borrar gráfica"</p>
+        <form action="#" id="seleccion">
+            <select name="year" id="year">
+
+            <option value="#">Selecciona un año</option>
+            <option value="22">2022</option>
+            <option value="21">2021</option>
+            <option value="20">2020</option>
+        </select>
+        <input id="submit" type="submit" value="Generar gráfica">
+        </form>
+
+        <button class="reload" id="reset1" type="click">Borrar gráfica</button>
+
+
+        <div id="circulo">
+            <canvas id="myChart2"></canvas>
+        </div>
+
+       
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../script.js"></script>
+</body>
+</html>
