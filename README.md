@@ -1,4 +1,4 @@
-#Proyecto FrontEnd #
+# Proyecto FrontEnd #
 ---
 ## Contenido ##
 
@@ -18,16 +18,20 @@ En la Home encontrarás una pequeña presentación y un botón con recomendacion
 En el navegador encontrarás dos posibilidades, alimentos y años. 
 Si clicas en alimentos, te llevará a esta página, donde podrás descubrir clicando en los botones de los alimentos sus gráficas de consumo por persona y año. 
 
-<img width="367" alt="Captura de pantalla 2023-11-05 230954" src="https://github.com/ElenaDRFS/proyecto-personal-api/assets/145337549/f45d8a42-ec79-4385-9ad9-da403e7eb0e5">
+
+<img width="582" alt="Captura de pantalla 2023-11-07 144644" src="https://github.com/ElenaDRFS/proyecto-personal-api/assets/145337549/6b2e786f-cbe4-4b2b-a18e-cc1aaff97806">
 
 
 
 Si clicas en años, te llevará a esta página, donde podrás descubrir seleccionar un año y descubrir el consumo total de los alimentos en ese año. 
 
-<img width="165" alt="Captura de pantalla 2023-11-05 231028" src="https://github.com/ElenaDRFS/proyecto-personal-api/assets/145337549/1943695f-d265-4870-9975-d569c67f56d9">
+
+<img width="481" alt="Captura de pantalla 2023-11-07 144708" src="https://github.com/ElenaDRFS/proyecto-personal-api/assets/145337549/0e9a59f5-e60c-4412-915f-e264fe8c4cd1">
 
 
-Try it!! https://elenadrfs.github.io/proyecto-personal-api/ 
+
+
+## Try it!! https://elenadrfs.github.io/proyecto-personal-api/ ##
 
 ## Herramientas ##
 - HTML%
