@@ -444,34 +444,36 @@ async function loadApi2(){
       años: e.Data.slice(0,3), //con este slice nos quedamos con los 3 ultimos años ya que así es como está ordenado
       nombre:e.Nombre
     }
-   
+
   })
+  console.log(filtro)
   
   
 
 }
 
-async function rellenarAños(){
+async function rellenarAños(){   //con esto rellenamos los objetos declarados arriba con los datos correspondientes
   await loadApi2();
   
   let filtro2;
+  
 
-    for(obj of filtro){
+    for(obj of filtro){   //por cada objeto que tiene filtro, entramos en los años, es decir, los 17 objetos, nos quedamos solo con años, que son los 3 que hemos coonseguido con el slice
     filtro2 = obj.años;
     console.log(filtro2)
     
-    for (i = 0; i < filtro2.length;i++){
-      let indicecero = filtro2[i]
-      if(indicecero.Anyo === 2022){
-        let valorF0 = indicecero.Valor
+    for (i = 0; i < filtro2.length;i++){  //recorremos ese nuevo array y le decimmos que entre a cada índice con la siguiente variable
+      let indice = filtro2[i]  //cada uno de los índices del array
+      if(indice.Anyo === 2022){  //si el año de ese indice es 2022, entonces cogemos esos valores y los pusheamos
+        let valorF0 = indice.Valor
        dosdos.valores.push(valorF0) 
        
-      }if(indicecero.Anyo === 2021){
-        let valorF1 = indicecero.Valor
+      }if(indice.Anyo === 2021){
+        let valorF1 = indice.Valor
        dosuno.valores.push(valorF1) 
     
-      }if(indicecero.Anyo === 2020){
-        let valorF0 = indicecero.Valor
+      }if(indice.Anyo === 2020){
+        let valorF0 = indice.Valor
        doscero.valores.push(valorF0) 
      
    
@@ -573,9 +575,11 @@ function callback2(arr){
 if(document.title == 'Home'){
     document.getElementById('advice').addEventListener('click', function(){
         let advice = document.getElementById('list');
-        if(advice.innerHTML == noInfo){
-            advice.innerHTML = info
+        if(advice.innerHTML === noInfo){
+          console.log('un click')
+            advice.innerHTML = info;
         }else{
+            console.log('dos click')
             advice.innerHTML = noInfo;
         }
     
